@@ -15,7 +15,7 @@ export default function Header() {
         <nav className="mx-auto flex max-w-[1220px] items-center justify-between rounded-xl bg-[#DDE0D6] backdrop-blur-md px-6 dark:bg-[#262727]">
           <span>
             <a href="/#">
-              <img src="/src/assets/logo portfolio.png" className="size-20 object-cover" alt="logo" />
+              <img src="/src/assets/logo-portfolio.png" className="size-20 object-cover" alt="logo" />
             </a>
           </span>
           <NavLinks />
