@@ -28,9 +28,9 @@ export default function Hero() {
                 href="/Front-End Developer.pdf"
                 target="_blank"
                 aria-label="Download Resume"
-                className="rounded-xl border-2 border-borders"
+                className=""
               >
-                <Button variant={"outline"} className="h-12 rounded-xl border-none px-6 text-base">
+                <Button variant={"outline"} className="h-12  rounded-xl px-6 text-base  border-2 border-borders">
                   Resume
                   <span>
                     <FileDown className="stroke-bgDark dark:stroke-bgLight" />

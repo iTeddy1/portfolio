@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTheme } from "./theme-provider";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
+  const { theme } = useTheme();
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -16,8 +18,6 @@ const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-      /* you can also use 'auto' behaviour 
-         in place of 'smooth' */
     });
   };
 
@@ -26,7 +26,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-5 right-4 z-50 rounded-full bg-black p-2 shadow-md"
+      className="fixed bottom-5 right-4 z-50 rounded-full bg-bgDark p-2 shadow-md dark:bg-bgLight"
       style={{ display: visible ? "inline" : "none" }}
       aria-labelledby="scroll-to-top"
     >
@@ -37,7 +37,7 @@ const ScrollToTop = () => {
         height="28"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
-        stroke="#ffffff"
+        stroke={`${theme === "dark" ? "#323434" : "#E1E3DB"}`}
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
