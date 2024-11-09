@@ -10,7 +10,7 @@ export default function About() {
           <div className="flex flex-col gap-8 lg:flex-row">
             <span className="flex w-full lg:w-1/2 xl:w-2/5">
               <img
-                src="/src/assets/dalat2.jpg"
+                src="/dalat2.jpg"
                 className="mx-auto size-96 rounded-full object-cover lg:mx-0"
                 alt="about-me-image"
               />
