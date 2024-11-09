@@ -11,8 +11,8 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${isScroll ? onScrollStyle : defaultStyle} fixed w-full z-10 transition-all duration-500`}>
-        <nav className="mx-auto flex max-w-[1220px] items-center justify-between rounded-xl bg-[#DDE0D6] backdrop-blur-md px-6 dark:bg-[#262727]">
+      <header className={`${isScroll ? onScrollStyle : defaultStyle} fixed z-10 w-full transition-all duration-500`}>
+        <nav className="mx-auto flex max-w-[1220px] items-center justify-between rounded-xl bg-[#DDE0D6] px-6 backdrop-blur-md dark:bg-[#262727]">
           <span>
             <a href="/#">
               <img src="/src/assets/logo-portfolio.png" className="size-20 object-cover" alt="logo" />

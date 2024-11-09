@@ -1,8 +1,6 @@
 import { skills } from "@/data/skills";
 import parse from "html-react-parser";
 
-
-
 export default function Skills() {
   return (
     <section id="skills" className="">

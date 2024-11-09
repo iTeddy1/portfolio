@@ -1,6 +1,5 @@
 import { projects } from "@/data/projects";
 
-
 export default function Projects() {
   return (
     <section id="projects" className=" ">
@@ -11,18 +10,21 @@ export default function Projects() {
         </div>
         <div className="space-y-6">
           {projects.map((project, index) => (
-            <div key={index} className="grid grid-cols-2 grid-rows-1 gap-6 rounded-lg border-borders dark:border-borders-dark dark:bg-container-dark bg-container border-2 p-4 shadow-lg">
+            <div
+              key={index}
+              className="grid grid-cols-2 grid-rows-1 gap-6 rounded-lg border-2 border-borders bg-container p-4 shadow-lg dark:border-borders-dark dark:bg-container-dark"
+            >
               <div className="flex flex-col justify-center p-4">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
                 <p>{project.description}</p>
                 <div className="mt-4 flex gap-2">
                   {project.techStacks.map((tech, index) => (
-                    <span key={index} className="rounded-md bg-bgLight dark:bg-bgDark border border-borders px-2 py-1">
+                    <span key={index} className="rounded-md border border-borders bg-bgLight px-2 py-1 dark:bg-bgDark">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="mt-4 flex ">
+                <div className="mt-4 flex">
                   <a href={project.link} target="_blank" className="fill-bgDark dark:fill-bgLight">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
