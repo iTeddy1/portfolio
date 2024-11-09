@@ -16,15 +16,21 @@ export default function Hero() {
               <span className="text-2xl font-semibold">
                 {"<"}Front End Developer {"/>"}.
               </span>{" "}
-              <br />
-              I like to code things from scratch, and enjoy bringing ideas to life in the browser. My ability to work effectively in teams further complements my desire to excel in the field. I am excited to leverage these skills and contribute everything I have.{" "}
+              <br />I like to code things from scratch, and enjoy bringing ideas to life in the browser. My ability to
+              work effectively in teams further complements my desire to excel in the field. I am excited to leverage
+              these skills and contribute everything I have.{" "}
             </p>
           </div>
           <div className="mt-8 flex items-center space-x-3">
             {/* CTA Button */}
             <div className="flex justify-center gap-4">
-              <a href="/Front-End Developer.pdf" target="_blank" aria-label="Download Resume" className="rounded-xl border-2 border-borders ">
-                <Button variant={"outline"} className="rounded-xl border-none text-base h-12 px-6">
+              <a
+                href="/Front-End Developer.pdf"
+                target="_blank"
+                aria-label="Download Resume"
+                className="rounded-xl border-2 border-borders"
+              >
+                <Button variant={"outline"} className="h-12 rounded-xl border-none px-6 text-base">
                   Resume
                   <span>
                     <FileDown className="stroke-bgDark dark:stroke-bgLight" />
@@ -54,7 +60,6 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <span className="fill-bgDark dark:fill-bgLight">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Gmail</title>

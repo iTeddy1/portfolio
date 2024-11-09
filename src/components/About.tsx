@@ -16,7 +16,7 @@ export default function About() {
               />
             </span>
             {/* Description  */}
-            <ul className="flex w-fit flex-col list-disc">
+            <ul className="flex w-fit list-disc flex-col">
               <li>
                 <p>
                   Hello! I'm Nguyen Duy Trung, a passionate front-end developer with a strong foundation in E-commerce.

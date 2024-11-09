@@ -11,8 +11,10 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${isScroll ? onScrollStyle : defaultStyle} px-0 sticky z-10 w-full transition-all duration-500`}>
-        <nav className="mx-auto flex md:max-w-[1230px] w-full items-center justify-between md:rounded-xl bg-[#DDE0D6] px-6 backdrop-blur-md dark:bg-[#262727] shadow-lg">
+      <header
+        className={`${isScroll ? onScrollStyle : defaultStyle} sticky z-10 w-full px-0 transition-all duration-500`}
+      >
+        <nav className="mx-auto flex w-full items-center justify-between bg-[#DDE0D6] px-6 shadow-lg backdrop-blur-md dark:bg-[#262727] md:max-w-[1230px] md:rounded-xl">
           <span>
             <a href="/#">
               <img src="/logo-portfolio.png" className="size-20 object-cover" alt="logo-portfolio" />
@@ -22,8 +24,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <ModeToggle />
             <a href="#contact">
-
-            <Button>Contact me</Button>
+              <Button>Contact me</Button>
             </a>
           </div>
         </nav>
