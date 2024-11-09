@@ -28,6 +28,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       className="fixed bottom-5 right-4 z-50 rounded-full bg-black p-2 shadow-md"
       style={{ display: visible ? "inline" : "none" }}
+      aria-labelledby="scroll-to-top"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

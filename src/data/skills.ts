@@ -79,4 +79,27 @@ export const skills = [
       },
     ],
   },
+  {
+    label: "Coursework",
+    items: [
+      {
+        name: "The Complete JavaScript Course 2024: From Zero to Expert!",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+          <path d="M9 3h6l3 7l-6 2l-6 -2z"></path>
+          <path d="M12 12l-3 -9"></path>
+          <path d="M15 11l-3 -8"></path>
+          <path d="M12 19.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5z"></path>
+        </svg>`,
+      },
+      {
+        name: "The Ultimate React Course 2024: React, Next.js, Redux & More",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+          <path d="M9 3h6l3 7l-6 2l-6 -2z"></path>
+          <path d="M12 12l-3 -9"></path>
+          <path d="M15 11l-3 -8"></path>
+          <path d="M12 19.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5z"></path>
+        </svg>`,
+      },
+    ],
+  },
 ];
