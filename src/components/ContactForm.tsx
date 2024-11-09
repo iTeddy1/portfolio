@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
 import { ContactSchema, ContactSchemaType } from "@/schema/ContactSchema";
 import emailjs from "@emailjs/browser";
-import { Label } from "./ui/label";
 
 export function ContactForm() {
   const form = useForm<ContactSchemaType>({
