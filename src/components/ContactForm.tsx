@@ -8,12 +8,11 @@ import { ContactSchema, ContactSchemaType } from "@/schema/ContactSchema";
 import emailjs from "@emailjs/browser";
 import { Label } from "./ui/label";
 
-
 export function ContactForm() {
   const form = useForm<ContactSchemaType>({
     resolver: zodResolver(ContactSchema),
   });
-  
+
   const onSubmit = async (data: ContactSchemaType) => {
     try {
       await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, data, {
@@ -40,7 +39,12 @@ export function ContactForm() {
               {/* <FormLabel className={fieldState.error ? "text-bgDark dark:text-bgLight" : ""}>Your email</FormLabel> */}
               <FormControl>
                 {/* <Label htmlFor="email" className="sr-only">s</Label> */}
-                <Input placeholder="Your email" {...field} aria-describedby="email"  className="border border-borders dark:border-borders-dark" />
+                <Input
+                  placeholder="Your email"
+                  {...field}
+                  aria-describedby="email"
+                  className="border border-borders dark:border-borders-dark"
+                />
               </FormControl>
               {fieldState.error && (
                 <FormMessage className="dark:text-[#F0A0A0]">{fieldState.error.message}</FormMessage>
