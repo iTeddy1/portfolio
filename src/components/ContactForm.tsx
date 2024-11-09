@@ -1,82 +1,86 @@
-"use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
+import { ContactSchema, ContactSchemaType } from "@/schema/ContactSchema";
+import emailjs from "@emailjs/browser";
+import { Label } from "./ui/label";
 
-const formSchema = z.object({
-  email: z.string().email({
-    message: "Invalid email address.",
-  }),
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
-});
 
 export function ContactForm() {
-  // ...
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
+  const form = useForm<ContactSchemaType>({
+    resolver: zodResolver(ContactSchema),
   });
-
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+  
+  const onSubmit = async (data: ContactSchemaType) => {
+    try {
+      await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, data, {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      });
+      alert("Email sent successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while sending the email. Please try again later.");
+    }
+  };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="md:w-[40%] space-y-4 border-2 rounded-xl bg-bgLight dark:bg-bgDark border-borders dark:border-borders-dark p-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full space-y-4 rounded-xl border-2 border-borders bg-bgLight p-4 dark:border-borders-dark dark:bg-bgDark lg:w-[40%]"
+      >
         <FormField
           control={form.control}
           name="email"
-          render={({ field }) => (
+          render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel>Your email</FormLabel>
+              {/* <FormLabel className={fieldState.error ? "text-bgDark dark:text-bgLight" : ""}>Your email</FormLabel> */}
               <FormControl>
-                <Input placeholder="Your email" {...field} />
+                {/* <Label htmlFor="email" className="sr-only">s</Label> */}
+                <Input placeholder="Your email" {...field} aria-describedby="email"  className="border border-borders dark:border-borders-dark" />
               </FormControl>
-              <FormMessage />
+              {fieldState.error && (
+                <FormMessage className="dark:text-[#F0A0A0]">{fieldState.error.message}</FormMessage>
+              )}
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="username"
-          render={({ field }) => (
+          name="fullName"
+          render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              {/* <FormLabel className={fieldState.error ? "text-bgDark dark:text-bgLight" : ""}>Name</FormLabel> */}
               <FormControl>
-                <Input placeholder="Name" {...field} />
+                <Input placeholder="Name" {...field} className="border border-borders dark:border-borders-dark" />
               </FormControl>
 
-              <FormMessage />
+              {fieldState.error && (
+                <FormMessage className="dark:text-[#F0A0A0]">{fieldState.error.message}</FormMessage>
+              )}
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
           name="message"
-          render={({ field }) => (
+          render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              {/* <FormLabel className={fieldState.error ? "text-bgDark dark:text-bgLight" : ""}>Message</FormLabel> */}
               <FormControl>
-                <Textarea placeholder="Let's talk about..." {...field} />
+                <Textarea
+                  rows={4}
+                  placeholder="Leave feedback about the site, career opportunities or just to say hello etc."
+                  {...field}
+                  className="border border-borders dark:border-borders-dark"
+                />
               </FormControl>
-              <FormMessage />
+              {fieldState.error && (
+                <FormMessage className="dark:text-[#F0A0A0]">{fieldState.error.message}</FormMessage>
+              )}
             </FormItem>
           )}
         />

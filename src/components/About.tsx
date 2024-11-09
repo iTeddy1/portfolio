@@ -7,32 +7,38 @@ export default function About() {
             <h2 className="text-6xl font-extrabold">About</h2>
             <div className="h-1 min-w-0 flex-grow bg-black dark:bg-bgLight"></div>
           </div>
-          <div className="flex gap-8">
-            <span className="flex w-2/5">
-              <img src="/src/assets/dalat2.jpg" className="size-96 rounded-full object-cover" alt="logo" />
+          <div className="flex flex-col gap-8 lg:flex-row">
+            <span className="flex w-full lg:w-1/2 xl:w-2/5">
+              <img
+                src="/src/assets/dalat2.jpg"
+                className="mx-auto size-96 rounded-full object-cover lg:mx-0"
+                alt="about-me-image"
+              />
             </span>
             {/* Description  */}
-            <div className="flex w-fit flex-col">
-              <p>
-                I am Nguyen Duy Trung, a Frontend Developer. I am passionate about creating beautiful and responsive
-                websites. I have experience in building websites using HTML, CSS, and JavaScript. I am also familiar
-                with React and Tailwind CSS. I am always eager to learn new technologies and improve my skills. I am
-                looking for opportunities to work on exciting projects and collaborate with talented people. I am a team
-                player and enjoy working in a collaborative environment. I am excited about the opportunity to work with
-                you and contribute to your projects.
-              </p>
-              <div>
-                <h3>Education</h3>
+            <ul className="flex w-fit flex-col list-disc">
+              <li>
                 <p>
-                  Bachelor of Science in Computer Science, University of Information Technology, Vietnam National
-                  University, Ho Chi Minh City
+                  Hello! I'm Nguyen Duy Trung, a passionate front-end developer with a strong foundation in E-commerce.
+                  Currently pursuing my Bachelor's degree at the University of Information Technology, I specialize in
+                  web development and have honed my skills through various academic and professional projects.
                 </p>
-                <p>GPA: 7.6/10</p>
-              </div>
-              <div>
-                <h3></h3>
-              </div>
-            </div>
+              </li>
+              <li>
+                <p>
+                  With a GPA of 7.8, I have consistently demonstrated dedication to learning and improving. My
+                  experience spans multiple e-commerce platforms, where I've taken on roles such as front-end developer,
+                  back-end developer, and project leader. I thrive in team environments, bringing strong problem-solving
+                  skills and a collaborative spirit to every project.
+                </p>
+              </li>
+              <li>
+                <p>
+                  I'm actively seeking a front-end developer internship to apply my skills in real-world settings, learn
+                  from industry professionals, and make meaningful contributions.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
