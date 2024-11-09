@@ -5,10 +5,10 @@ export default function NavLinks() {
   const [tab, setTab] = useState<number | null>();
 
   return (
-    <ul className="flex gap-8 p-4">
+    <ul className="flex gap-8 p-4  ">
       {navLinks.map((link, index) => (
         <li className="" key={link.path} onMouseEnter={() => setTab(index)} onMouseLeave={() => setTab(null)}>
-          <a href={link.path} className="relative text-xs font-normal">
+          <a href={link.path} className="relative text-base font-medium">
             {link.title}
             <span
               style={{

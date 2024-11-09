@@ -7,25 +7,24 @@ export default function Hero() {
       <section id="home" className="relative flex flex-col items-center justify-center">
         <div className="mx-auto mt-32 flex flex-col items-start">
           {/* Heading  */}
-          <h1 className="max-w-[14em] text-balance py-4 text-5xl font-bold tracking-tight lg:text-6xl 2xl:text-5xl">
+          <h1 className="max-w-[14em] text-balance py-3 text-5xl font-bold tracking-tight lg:text-6xl 2xl:text-5xl">
             Nguyen Duy Trung
           </h1>
           {/* Sub Heading  */}
-          <div className="lg:text-md mt-4 max-w-xl text-base font-medium lg:mt-6 2xl:text-xl">
+          <div className="lg:text-md mt-4 max-w-xl text-base font-medium 2xl:text-xl">
             <p className="text-base">
               <span className="text-2xl font-semibold">
                 {"<"}Front End Developer {"/>"}.
               </span>{" "}
               <br />
-              Empower marketers to release on-brand pages fast while using your tech stack. Prismic is the headless page
-              builder for Next.js, Nuxt, and SvelteKit sites.{" "}
+              I like to code things from scratch, and enjoy bringing ideas to life in the browser. My ability to work effectively in teams further complements my desire to excel in the field. I am excited to leverage these skills and contribute everything I have.{" "}
             </p>
           </div>
           <div className="mt-8 flex items-center space-x-3">
             {/* CTA Button */}
-            <div className="flex justify-center gap-4 rounded-xl border-2 border-borders">
-              <a href="/about" className="">
-                <Button variant={"outline"} className="rounded-xl border-none">
+            <div className="flex justify-center gap-4">
+              <a href="/Front-End Developer.pdf" target="_blank" aria-label="Download Resume" className="rounded-xl border-2 border-borders ">
+                <Button variant={"outline"} className="rounded-xl border-none text-base h-12 px-6">
                   Resume
                   <span>
                     <FileDown className="stroke-bgDark dark:stroke-bgLight" />
@@ -49,7 +48,13 @@ export default function Hero() {
                 </svg>
               </span>
             </a>
-            <a className="size-6" href="" target="_blank">
+            <a
+              className="size-6"
+              href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=duytrung.ng1@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
               <span className="fill-bgDark dark:fill-bgLight">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Gmail</title>
