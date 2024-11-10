@@ -1,13 +1,11 @@
 import { projects } from "@/data/projects";
+import SectionDivide from "./SectionDivide";
 
 export default function Projects() {
   return (
     <section id="projects" className=" ">
       <div className="mx-16">
-        <div className="flex items-center gap-5 py-[80px]">
-          <h2 className="text-6xl font-extrabold">Projects</h2>
-          <div className="h-1 min-w-0 flex-grow bg-bgDark"></div>
-        </div>
+        <SectionDivide sectionName="Projects" />
         <div className="space-y-6">
           {projects.map((project, index) => (
             <div

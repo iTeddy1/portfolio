@@ -24,16 +24,14 @@ export default function Hero() {
           <div className="mt-8 flex items-center space-x-3">
             {/* CTA Button */}
             <div className="flex justify-center gap-4">
-              <a
-                href="/Front-End Developer.pdf"
-                target="_blank"
-                aria-label="Download Resume"
-                className=""
-              >
-                <Button variant={"outline"} className="h-12  rounded-xl px-6 text-base  border-2 border-borders">
+              <a href="/Front-End Developer.pdf" target="_blank" aria-label="Download Resume" className="">
+                <Button
+                  variant={"outline"}
+                  className="h-12 rounded-xl border-4 border-[#FF9D3D] bg-[#FFB26F] px-6 text-base hover:bg-[#FF9D3D] dark:border-[#FF8000] dark:bg-[#FFB26F] dark:text-bgDark dark:hover:bg-[#FF8000]"
+                >
                   Resume
                   <span>
-                    <FileDown className="stroke-bgDark dark:stroke-bgLight" />
+                    <FileDown className="dark:stroke-bgDark" />
                   </span>
                 </Button>
               </a>

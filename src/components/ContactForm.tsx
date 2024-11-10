@@ -87,7 +87,9 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Send message</Button>
+        <Button type="submit" className="">
+          Send message
+        </Button>
       </form>
     </Form>
   );
