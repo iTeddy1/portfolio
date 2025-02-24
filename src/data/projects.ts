@@ -4,7 +4,7 @@ export const projects = [
     description:
       "A responsive online store with full e-commerce features, including product browsing, search, cart, and checkout. Utilized modern web technologies for a seamless user experience.",
     image: "/project1.png",
-    link: "https://laandlin.vercel.app/",
+    link: "https://laandlin.com/",
     techStacks: ["React", "Tailwind CSS", "Redux", "Framer Motion", "Axios"],
     // githubLink: "https://github.com",
   },
