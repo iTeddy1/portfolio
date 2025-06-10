@@ -27,7 +27,9 @@ export default function About() {
                 <p className="max-w-6xl">
                   With a GPA of 7.8, I have consistently demonstrated dedication to learning and improving. My
                   experience spans multiple e-commerce platforms, where I've taken on roles such as front-end developer,
-                  back-end developer, and project leader. I thrive in team environments, bringing strong problem-solving
+                  back-end developer, and project leader.Proven ability to convert Figma designs into responsive, production-ready 
+UIs using Tailwind CSS, TypeScript, and Redux. Strong focus on user experience, performance optimization, 
+and agile development workflows. I thrive in team environments, bringing strong problem-solving
                   skills and a collaborative spirit to every project.
                 </p>
               </li>

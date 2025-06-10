@@ -57,7 +57,7 @@ export default function Projects() {
                 </div>
               </div>
               <span className="w-full lg:w-[90%]">
-                <img src={project.image} alt={project.title} className="w-full rounded-lg object-contain" />
+                <img src={project.image} alt={project.title} className="w-full rounded-lg object-contain max-h-[278px]" />
               </span>
             </div>
           ))}
