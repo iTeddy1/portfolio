@@ -66,7 +66,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-base">Education</CardTitle>
                 <CardDescription className="text-sm">
-                  {education.degree} in {education.field}
+                  {education.degree}
                 </CardDescription>
               </CardHeader>
             </Card>
