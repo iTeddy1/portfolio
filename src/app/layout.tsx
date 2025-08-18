@@ -10,6 +10,12 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Duy Trung | Frontend Developer',
+  description:
+    'Nguyen Duy Trung is a Frontend Developer specializing in building scalable, high-performance web and mobile interfaces using React, Next.js, TypeScript.',
+  alternates: {
+    canonical: 'https://teddy.is-a.dev',
+  },
+  robots: 'index, follow',
 }
 
 export default function RootLayout({

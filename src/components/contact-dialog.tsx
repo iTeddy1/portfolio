@@ -145,7 +145,10 @@ export function ContactDialog({ children }: ContactDialogProps) {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         {children || (
-          <div className="hover:border-border rounded-base flex min-w-[85px] items-center gap-2 px-2 py-1 whitespace-nowrap transition-colors hover:border-2">
+          <div
+            aria-label="Open contact dialog"
+            className="hover:border-border rounded-base flex min-w-[85px] items-center gap-2 px-2 py-1 whitespace-nowrap transition-colors hover:border-2"
+          >
             Contact
           </div>
         )}
