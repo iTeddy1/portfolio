@@ -22,36 +22,46 @@ export default function Home() {
   return (
     <div className="font-base">
       {/* Hero */}
-      <Card className="mb-12">
-        <CardHeader>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
-            <Avatar className="size-16 sm:size-40">
-              <AvatarImage
-                className="object-contain"
-                src="/avatar.webp"
-                alt="Nguyen Duy Trung"
-              />
-              <AvatarFallback>Teddy</AvatarFallback>
-            </Avatar>
-            <div className="text-center sm:text-left">
-              <CardTitle className="text-2xl sm:text-4xl">
-                Nguyen Duy Trung
-              </CardTitle>
-              <CardDescription className="text-lg sm:text-xl">
-                Frontend Developer
+      <Card className="mb-12 overflow-hidden">
+        <CardHeader className="from-background via-background/95 to-muted/30 relative bg-gradient-to-br p-0">
+          <div className="flex flex-col items-center gap-6 p-6 sm:flex-row sm:items-center sm:gap-8 sm:p-8">
+            <div className="relative shrink-0">
+              <Avatar className="border-background size-24 border-4 shadow-lg sm:size-32 lg:size-40">
+                <AvatarImage
+                  className="object-contain"
+                  src="/avatar.webp"
+                  alt="Nguyen Duy Trung"
+                />
+                <AvatarFallback className="text-lg sm:text-xl">
+                  Teddy
+                </AvatarFallback>
+              </Avatar>
+            </div>
+            <div className="flex-1 space-y-3 text-center sm:text-left">
+              <div className="space-y-2">
+                <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                  Nguyen Duy Trung
+                </CardTitle>
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                  <CardDescription className="text-primary text-lg font-medium sm:text-xl">
+                    {'<Frontend Developer />'}
+                  </CardDescription>
+                  <Badge variant="neutral" className="mx-auto w-fit sm:mx-0">
+                    Available for work
+                  </Badge>
+                </div>
+              </div>
+              <CardDescription className="text-muted-foreground text-base leading-relaxed sm:text-lg lg:max-w-2xl">
+                Frontend Developer with hands-on experience building scalable,
+                high-performance web and mobile interfaces using React, Next.js,
+                and React Native. Converts Figma designs into responsive,
+                production-ready UIs with Tailwind CSS and TypeScript;
+                experienced with Redux and modern tooling.
               </CardDescription>
             </div>
           </div>
         </CardHeader>
         <CardContent>
-          <p className="text-base sm:text-lg">
-            Frontend Developer with hands-on experience building scalable,
-            high-performance web and mobile interfaces using React, Next.js, and
-            React Native. Converts Figma designs into responsive,
-            production-ready UIs with Tailwind CSS and TypeScript; experienced
-            with Redux and modern tooling.
-          </p>
-
           {/* Quick facts */}
           <div className="my-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
             <Card className="bg-secondary-background">
