@@ -26,7 +26,7 @@ export default function Home() {
         <CardHeader className="from-background via-background/95 to-muted/30 relative bg-gradient-to-br p-0">
           <div className="flex flex-col items-center gap-6 p-6 sm:flex-row sm:items-center sm:gap-8 sm:p-8">
             <div className="relative shrink-0">
-              <Avatar className="border-background size-24 border-4 shadow-lg sm:size-32 lg:size-40">
+              <Avatar className="size-24 sm:size-32 lg:size-40">
                 <AvatarImage
                   className="object-contain"
                   src="/avatar.webp"
