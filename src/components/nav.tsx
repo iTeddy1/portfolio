@@ -27,14 +27,14 @@ export default function Nav() {
   ]
 
   return (
-    <div className="fixed top-5 left-0 z-50 w-full">
-      <nav className="text-main-foreground border-border shadow-shadow rounded-base bg-main font-base mx-auto flex w-max gap-5 border-2 p-2.5 px-6 text-sm sm:text-base">
+    <div className="fixed left-0 z-50 w-full md:top-5">
+      <nav className="text-main-foreground border-border shadow-shadow rounded-base bg-main font-base mx-auto flex w-max max-w-[calc(100vw-1rem)] gap-2 overflow-hidden border-2 p-2 px-3 text-xs sm:gap-5 sm:p-2.5 sm:px-6 sm:text-base">
         {links.map((link) => {
           return (
             <Link
               key={link.path}
               className={clsx(
-                'hover:border-border rounded-base border-2 px-2 py-1 whitespace-nowrap transition-colors',
+                'hover:border-border rounded-base border-2 px-1 py-1 text-xs whitespace-nowrap transition-colors sm:px-2 sm:text-base',
                 path === link.path ? 'border-border' : 'border-transparent',
               )}
               href={link.path}
@@ -43,19 +43,8 @@ export default function Nav() {
             </Link>
           )
         })}
-        <GoogleReCaptchaProvider
-          reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-          useRecaptchaNet={false}
-          useEnterprise={false}
-          scriptProps={{
-            async: false,
-            defer: false,
-            appendTo: 'head',
-            nonce: undefined,
-          }}
-        >
-          <ContactDialog />
-        </GoogleReCaptchaProvider>
+
+        <ContactDialog />
         <ThemeSwitcher />
       </nav>
     </div>
