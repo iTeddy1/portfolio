@@ -1,0 +1,26 @@
+# <type>(<scope>): <subject>
+#
+# <body>
+#
+# <footer>
+#
+# Type must be one of:
+# - feat: A new feature
+# - fix: A bug fix
+# - docs: Documentation only changes
+# - style: Changes that do not affect the meaning of the code
+# - refactor: A code change that neither fixes a bug nor adds a feature
+# - perf: A code change that improves performance
+# - test: Adding missing tests or correcting existing tests
+# - build: Changes that affect the build system or external dependencies
+# - ci: Changes to our CI configuration files and scripts
+# - chore: Other changes that don't modify src or test files
+# - translation: Changes related to translations or language localization
+# - security: Changes that address security vulnerabilities
+#
+# Subject must be at least 10 characters long
+# Use the imperative mood in the subject line
+# Do not end the subject line with a period
+# Separate subject from body with a blank line
+# Use the body to explain what and why vs. how
+# Wrap the body at 72 characters

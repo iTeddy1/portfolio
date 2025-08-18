@@ -1,35 +1,127 @@
-export const projects = [
+type Project = {
+  name: string
+  description: string
+  previewImage: string
+  repoUrl: string
+  liveLink: string
+  role?: string
+  stack?: string[]
+  highlights?: string[]
+  category?: string
+  status?: string
+  featured?: boolean
+}
+
+const PROJECTS: Project[] = [
   {
-    title: "Laandlin E-commerce application",
-    description: "An e-commerce app using React Native with a Node.js/Express/MongoDB backend, deployed on Vercel. I implemented JWT authentication, product filtering, similar product recommendations, static banners, and VND price formatting, optimizing API performance and achieving a 9.5/10 academic score.",
-    image: "/project4.png",
-    githubLink: "https://github.com/iTeddy1/laandlin-app",
-    techStacks: ["React Native", "Node.js", "Express", "MongoDB", "Redux Toolkit", "Tailwind CSS"], 
-  },
-  {
-    title: "Laandlin E-commerce website",
+    name: 'TVE Technical',
     description:
-      "A responsive online store with full e-commerce features, including product browsing, search, cart, and checkout. Utilized modern web technologies for a seamless user experience.",
-    image: "/project1.png",
-    link: "https://laandlin.com/",
-    techStacks: ["React", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "Axios"],
-    // githubLink: "https://github.com",
+      'High-performance freelance website with accessibility focus, multilingual support, and headless CMS architecture.',
+    liveLink: 'https://iteddy1.vercel.app/work',
+    previewImage: '/project1.png',
+    repoUrl: '',
+    category: 'Web Development',
+    status: 'Live',
+    featured: true,
+    role: 'Full-Stack Developer',
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'GraphQL',
+      'WordPress',
+      'TanStack Query',
+      'Vercel',
+      'Render',
+      'TiDB',
+      'i18next',
+      'shadcn/ui',
+    ],
+    highlights: [
+      'Achieved 100/100 Lighthouse performance score and reduced First Contentful Paint by 40%',
+      'Built headless WordPress CMS with 5+ custom content types for non-dev content management',
+      'Implemented TanStack Query data-fetching strategy, reducing client-side API requests by 60%',
+      'Designed CI/CD workflow across Vercel, Render, and TiDB for streamlined team deployment',
+      'Built site-wide search system with <200ms response time',
+      'Integrated i18next for multilingual support (EN & VN) with future scalability in mind',
+    ],
   },
   {
-    title: "Frenzy E-commerce website",
+    name: 'Laandlin Mobile App',
     description:
-      "A comprehensive e-commerce website featuring an admin panel for managing products, orders, and users, alongside a user-friendly interface for product search, categories, and checkout. Integrated Momo and VNPay for seamless transactions.",
-    image: "/project2.png",
-    techStacks: ["Laravel", "MySQL", "Tailwind CSS"],
-    githubLink: "https://github.com/iTeddy1/Frenzy-real",
+      'React Native e-commerce mobile application with optimized backend and modern UI patterns.',
+    liveLink: '',
+    previewImage: '/project2.png',
+    repoUrl: '',
+    category: 'Mobile Development',
+    status: 'Completed',
+    featured: true,
+    role: 'Mobile Developer',
+    stack: [
+      'React Native',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Vercel',
+      'Expo',
+      'TypeScript',
+    ],
+    highlights: [
+      'Implemented JWT authentication and secure user management',
+      'Built product filtering & recommendation algorithms',
+      'Optimized API response time from 800ms to 210ms (73% improvement)',
+      'Deployed scalable backend infrastructure on Vercel',
+      'Cross-platform compatibility for iOS and Android',
+    ],
   },
   {
-    title: "Frontend Training 2023 by Dwarves Foundation",
+    name: 'Personal Portfolio Website',
     description:
-      "Built a bookstore app in a course, covering HTML, CSS, JavaScript, React, and Next.js. Learned state management, tooling setup, TailwindCSS styling, form handling, and API integration for a robust frontend foundation.",
-    image: "project3.png",
-    link: "https://df-frontend-2023-ass-5.vercEel.app/",
-    techStacks: ["Next.js", "Typescript", "Tailwind CSS", "SWR"],
-    githubLink: "https://github.com/iTeddy1/df-frontend-2023",
+      'Modern portfolio website showcasing projects and skills with neobrutalism design and interactive features.',
+    liveLink: 'https://iteddy1.vercel.app',
+    previewImage: '/preview.png',
+    repoUrl: 'https://github.com/iTeddy1/neobrutalism-portfolio',
+    category: 'Web Development',
+    status: 'Live',
+    featured: true,
+    role: 'Frontend Developer',
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Framer Motion',
+      'reCAPTCHA v3',
+    ],
+    highlights: [
+      'Responsive neobrutalism design with dark/light theme support',
+      'Interactive contact form with reCAPTCHA v3 integration',
+      'Performance-optimized with Next.js 15 and modern React patterns',
+      'Accessibility-compliant components using shadcn/ui',
+      'Deployed on Vercel with automatic CI/CD integration',
+    ],
   },
-];
+  {
+    name: 'Laandlin E-Commerce Website',
+    description:
+      'Full-featured e-commerce website with performance optimization and modern React architecture.',
+    liveLink: '',
+    previewImage: '/project3.png',
+    repoUrl: '',
+    category: 'Web Development',
+    status: 'Completed',
+    featured: false,
+    role: 'Frontend Developer',
+    stack: ['React', 'Tailwind CSS', 'TypeScript', 'Redux', 'Vite'],
+    highlights: [
+      'Complete e-commerce functionality: catalog, search, cart, checkout',
+      'Consistent design system with unified color palette across 25+ pages',
+      'Bundle size optimization from 20MB to 2MB (90% reduction)',
+      'Improved load performance by 90% through code splitting and lazy loading',
+      'State management with Redux for complex user interactions',
+    ],
+  },
+]
+
+export default PROJECTS
