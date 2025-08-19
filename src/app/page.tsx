@@ -150,12 +150,12 @@ export default function Home() {
           Featured Projects
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.slice(0, 2).map((project, id) => (
-            <Card key={id} className="overflow-hidden">
+          {PROJECTS.slice(0, 2).map((project) => (
+            <Card key={project.name} className="overflow-hidden">
               <div className="px-6 pt-6">
                 <AspectRatio
                   className="border-border rounded-base shadow-shadow border-2"
-                  ratio={71 / 26}
+                  ratio={55.6 / 26}
                 >
                   <img
                     className="rounded-base w-full"

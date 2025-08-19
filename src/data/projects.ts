@@ -1,4 +1,4 @@
-type Project = {
+export type Project = {
   name: string
   description: string
   previewImage: string
@@ -16,9 +16,9 @@ const PROJECTS: Project[] = [
   {
     name: 'TVE Technical',
     description:
-      'High-performance freelance website with accessibility focus, multilingual support, and headless CMS architecture.',
-    liveLink: 'https://iteddy1.vercel.app/work',
-    previewImage: '/project1.png',
+      'Company website with accessibility focus, multilingual support, and headless CMS architecture.',
+    liveLink: 'https://tve-website.vercel.app/',
+    previewImage: '/projects/tve.png',
     repoUrl: '',
     category: 'Web Development',
     status: 'Live',
@@ -29,30 +29,28 @@ const PROJECTS: Project[] = [
       'TypeScript',
       'Tailwind CSS',
       'GraphQL',
+      'Vercel',
       'WordPress',
       'TanStack Query',
-      'Vercel',
-      'Render',
-      'TiDB',
       'i18next',
       'shadcn/ui',
     ],
     highlights: [
-      'Achieved 100/100 Lighthouse performance score and reduced First Contentful Paint by 40%',
-      'Built headless WordPress CMS with 5+ custom content types for non-dev content management',
-      'Implemented TanStack Query data-fetching strategy, reducing client-side API requests by 60%',
-      'Designed CI/CD workflow across Vercel, Render, and TiDB for streamlined team deployment',
-      'Built site-wide search system with <200ms response time',
-      'Integrated i18next for multilingual support (EN & VN) with future scalability in mind',
+      'Achieved 100/100 Lighthouse performance score and reduced First Contentful Paint by 40% through optimization',
+      'Built headless WordPress CMS with 5+ custom content types for non-dev content management and flexibility',
+      'Implemented TanStack Query data-fetching strategy, reducing client-side API requests by 60% for better performance',
+      'Designed CI/CD workflow across Vercel, Render, and TiDB for streamlined team deployment and automated testing',
+      'Built site-wide search system with <200ms response time and enhanced user experience features',
+      'Integrated i18next for multilingual support (EN & VN) with future scalability in mind and SEO benefits',
     ],
   },
   {
     name: 'Laandlin Mobile App',
     description:
-      'React Native e-commerce mobile application with optimized backend and modern UI patterns.',
+      'React Native e-commerce mobile application with Node.js/Express backend and modern UI patterns for seamless shopping.',
     liveLink: '',
-    previewImage: '/project2.png',
-    repoUrl: '',
+    previewImage: '/projects/laandlin-app.png',
+    repoUrl: 'https://github.com/iTeddy1/laandlin-app',
     category: 'Mobile Development',
     status: 'Completed',
     featured: true,
@@ -78,9 +76,9 @@ const PROJECTS: Project[] = [
     name: 'Personal Portfolio Website',
     description:
       'Modern portfolio website showcasing projects and skills with neobrutalism design and interactive features.',
-    liveLink: 'https://iteddy1.vercel.app',
-    previewImage: '/preview.png',
-    repoUrl: 'https://github.com/iTeddy1/neobrutalism-portfolio',
+    liveLink: 'https://teddy.is-a.dev',
+    previewImage: '/projects/portfolio.png',
+    repoUrl: 'https://github.com/iTeddy1/portfolio',
     category: 'Web Development',
     status: 'Live',
     featured: true,
@@ -106,8 +104,8 @@ const PROJECTS: Project[] = [
     name: 'Laandlin E-Commerce Website',
     description:
       'Full-featured e-commerce website with performance optimization and modern React architecture.',
-    liveLink: '',
-    previewImage: '/project3.png',
+    liveLink: 'https://laandlin.com/',
+    previewImage: '/projects/laandlin.png',
     repoUrl: '',
     category: 'Web Development',
     status: 'Completed',
