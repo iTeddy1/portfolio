@@ -1,5 +1,5 @@
 const education = {
-  period: '2022 - Expected 2026',
+  period: '2022 - Expected 2026 (Pending graduate)',
   degree: 'Bachelor of E-commerce',
   specialize: 'Web Development',
   school: 'University of Information Technology',

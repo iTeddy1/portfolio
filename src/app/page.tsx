@@ -90,13 +90,13 @@ export default function Home() {
                         Self-taught
                       </Badge>
                       <span className="text-muted-foreground text-[12px]">
-                        2+ years
+                        3+ years
                       </span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Badge className="px-1 py-0 text-[12px]">Working </Badge>
                       <span className="text-muted-foreground text-[12px]">
-                        2 months
+                        6 months
                       </span>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ export default function Home() {
         </div>
         <div className="mt-6">
           <Button asChild>
-            <a href="/work">View all work</a>
+            <Link href="/work">View all work</Link>
           </Button>
         </div>
       </div>

@@ -14,6 +14,36 @@ export type Project = {
 
 const PROJECTS: Project[] = [
   {
+    name: 'Money Management',
+    highlights: [
+      `Engineered an end-to-end Project Financial Management System using React 19, TypeScript, and Fastify, successfully migrating the company's manual Excel-based workflow to a centralized PostgreSQL database, establishing a "Single Source of Truth" for all financial data.`,
+      'Architected a scalable Backend based on Layered Architecture and Dependency Injection, utilizing Prisma ORM and Materialized Views to handle complex financial reporting queries with real-time performance instead of batch processing.',
+      'Deployed and Delivered a containerized solution using Docker & Docker Compose for on-premise infrastructure, achieving 100% delivery of MVP features and automated database backup mechanisms.',
+      'Built a highly accessible and responsive UI system with shadcn/ui and Tailwind CSS. Developed complex financial forms integrated with React Hook Form and Zod schema validation, ensuring 100% data accuracy on the client side before submission.',
+    ],
+    description:
+      'A comprehensive Project Financial Management System designed to streamline and automate financial workflows, replacing manual Excel processes with a centralized, efficient solution.',
+    liveLink: '',
+    previewImage: '/projects/money-management.png',
+    repoUrl: 'https://github.com/iTeddy1/money-management',
+    category: 'Web Development',
+    status: 'Live',
+    featured: true,
+    role: 'Full-Stack Developer',
+    stack: [
+      'React 19',
+      'TypeScript',
+      'Fastify',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Docker',
+      'shadcn/ui',
+      'Tailwind CSS',
+      'React Hook Form',
+      'Zod',
+    ],
+  },
+  {
     name: 'TVE Technical',
     description:
       'Company website with accessibility focus, multilingual support, and headless CMS architecture.',
