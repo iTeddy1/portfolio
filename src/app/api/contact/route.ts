@@ -1,5 +1,22 @@
 import { contactSchema } from '@/schema/contact'
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resendApiKey = process.env.RESEND_API_KEY
+const contactToEmail = process.env.CONTACT_TO_EMAIL
+const contactFromEmail =
+  process.env.CONTACT_FROM_EMAIL || 'Portfolio Contact <onboarding@resend.dev>'
+
+const resend = resendApiKey ? new Resend(resendApiKey) : null
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
 
 async function verifyRecaptcha(
   token: string,
@@ -132,31 +149,65 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Implement your email sending logic here
-    // Options include:
-    // - Nodemailer with SMTP
-    // - SendGrid API
-    // - Resend API
-    // - AWS SES
-    // - Mailgun API
+    if (!resend) {
+      console.error('RESEND_API_KEY is not set')
+      return NextResponse.json(
+        {
+          error: 'Server email configuration error',
+        },
+        { status: 500 },
+      )
+    }
 
-    // Example with console logging for development
-    console.log('Contact form submission:', {
-      name,
-      email,
-      subject,
-      message,
-      timestamp: new Date().toISOString(),
+    if (!contactToEmail) {
+      console.error('CONTACT_TO_EMAIL is not set')
+      return NextResponse.json(
+        {
+          error: 'Server email recipient configuration error',
+        },
+        { status: 500 },
+      )
+    }
+
+    const { data, error: resendError } = await resend.emails.send({
+      from: contactFromEmail,
+      to: contactToEmail,
+      subject: `[Portfolio] ${subject}`,
+      replyTo: email,
+      text: [
+        'New portfolio contact submission',
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Subject: ${subject}`,
+        '',
+        'Message:',
+        message,
+      ].join('\n'),
+      html: `
+        <h2>New portfolio contact submission</h2>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+        <p><strong>Message:</strong></p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br />')}</p>
+      `,
     })
 
-    // Here you would typically:
-    // 1. Send email to yourself with the contact details
-    // 2. Send confirmation email to the user
-    // 3. Store in database if needed
-    // 4. Send notification to Slack/Discord if desired
+    if (resendError) {
+      console.error('Failed to send email with Resend:', resendError)
+      return NextResponse.json(
+        {
+          error: 'Failed to send message',
+        },
+        { status: 502 },
+      )
+    }
 
-    // Simulate processing delay
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    console.log('Contact email sent with Resend:', {
+      emailId: data?.id,
+      to: contactToEmail,
+      from: contactFromEmail,
+    })
 
     return NextResponse.json(
       {

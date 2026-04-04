@@ -9,6 +9,25 @@ const PAST_ROLES: {
   achievements?: string[]
 }[] = [
   {
+    company: 'TVE Technique Company Limited',
+    role: 'Software Engineer Intern',
+    location: 'Vietnam',
+    type: 'Internship',
+    description: [
+      'Built reusable frontends with custom validation, shared layouts, table wrappers, standardizing data workflows.',
+      'Architected a reusable backend framework based on Layered Architecture,enabling standardized, scalable solutions across ERP applications and successfully applied to 2 company projects.',
+      'Deployed the containerized app on-site using Docker,delivering real-time reporting & reducing manual work.',
+      'Focused on performance optimization, accessibility standards, and clean code practices (ESLint/TypeScript)',
+    ],
+    startDate: 'July 2025',
+    endDate: 'December 2025',
+    achievements: [
+      'Successfully delivered pixel-perfect UI components',
+      'Improved code quality through TypeScript implementation',
+      'Contributed to team agile development processes',
+    ],
+  },
+  {
     company: 'Atom Solution',
     role: 'Frontend Developer Intern',
     location: 'Vietnam',

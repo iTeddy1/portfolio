@@ -30,6 +30,25 @@ pnpm run dev
 - Inside `page.tsx` update the content
 - Update the `favicon.ico`
 
+### Contact email (Resend)
+
+The contact API route uses Resend to send form submissions.
+
+Add these environment variables:
+
+```bash
+RESEND_API_KEY=re_xxx
+CONTACT_TO_EMAIL=you@example.com
+# Optional (defaults to onboarding@resend.dev)
+CONTACT_FROM_EMAIL="Portfolio Contact <onboarding@resend.dev>"
+```
+
+Notes:
+
+- For free testing, `onboarding@resend.dev` works as sender.
+- To send from your own domain/email, verify a domain in Resend and set `CONTACT_FROM_EMAIL` to that identity.
+- Keep `RECAPTCHA_SECRET_KEY` and `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` configured as before.
+
 ### Content config
 
 #### Links on the home page
